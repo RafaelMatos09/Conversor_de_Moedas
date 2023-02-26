@@ -50,7 +50,7 @@ public class ConversorMoedas extends JFrame {
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Converter de Reais a Dólar", "Converter de Reais a Euro", "Converter de Reais a Libras Esterlinas", 
 				"Converter de Reais a Peso Argentino", "Converter de Reais a Peso Chileno", "Converter de Dólar a Reais", "Converter de Euro a Reais", "Converter de Libras Esterlinas a Reais", 
 				"Converter de Peso argentino a  Reais", "Converter de Peso Chileno a Reais"}));
-		comboBox.setBounds(120, 102, 182, 22);
+		comboBox.setBounds(72, 102, 256, 22);
 		contentPane.add(comboBox);
 		
 		JButton btnNewButton = new JButton("Ok");
@@ -90,7 +90,7 @@ public class ConversorMoedas extends JFrame {
 				  }
 			}
 		});
-		btnNewButton.setBounds(120, 135, 89, 23);
+		btnNewButton.setBounds(95, 135, 89, 23);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Menu");
