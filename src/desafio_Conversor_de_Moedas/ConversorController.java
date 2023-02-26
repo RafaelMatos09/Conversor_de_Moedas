@@ -1,6 +1,7 @@
 package desafio_Conversor_de_Moedas;
 
 import javax.swing.JOptionPane;
+import java.text.DecimalFormat;
 
 public class ConversorController {
 	
@@ -24,8 +25,10 @@ public class ConversorController {
 			  double valor = Double.parseDouble(inputValue);
 			  this.valor = valor;
 			  double calc = valor / taxa;
+			  DecimalFormat df = new DecimalFormat("#,###.00");
+			  df.format(calc);
 			  this.resultado = calc;
-			  String msg = "O valor convertido de Reais a " + moeda + "R$" + calc;
+			  String msg = "O valor convertido para " + moeda + "R$" + calc;
 			  JOptionPane.showMessageDialog(null, msg);
 			  	  
 			  
@@ -33,8 +36,10 @@ public class ConversorController {
 			  double valor = Double.parseDouble(inputValue);
 			  this.valor = valor;
 			  double calc = valor * taxa;
+			  DecimalFormat df = new DecimalFormat("#,###.00");
+			  df.format(calc);
 			  this.resultado = calc;
-			  String msg = "O valor convertido de Reais a " + moeda + "R$" + calc;
+			  String msg = "O valor convertido para  " + moeda + "R$" + calc;
 			  JOptionPane.showMessageDialog(null, msg);
 			  	  
 		  } else {
