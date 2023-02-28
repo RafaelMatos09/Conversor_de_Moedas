@@ -5,7 +5,6 @@ Back End - Java </h1>
 <p align="center">
 <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
 </p>
-<br><br>
  
 <h2 align="left"> 📖 Descrição </h2>
 
@@ -26,10 +25,13 @@ Desafio proposto pela Oracle ONE turma 4, conversor de moedas em JAVA utilizando
 
 🚧 Funcionalidade em construção 🚧
 
-<br><br>
+<br>
 <h2>🛠️ Abrir e rodar o projeto</h2>
 
 Para abrir o conversor basta clicar na classe Menu.java dentro da ide Eclipse, com todas os arquivos do repositorio, irá abrir um menu de seleção para qual funcionalidade deseja.
 
+<h2> 🧑‍💻 Tecnologias utilizadas </h2>
 
-
+- Java 19.0.2
+- Eclipse IDE
+- Paradigma de orientação a objetos
