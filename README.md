@@ -15,7 +15,7 @@ Desafio proposto pela Oracle ONE turma 4, conversor de moedas em JAVA utilizando
 
 <strong>Conversor de Moedas</strong>
         
-- Converter de Reais a Dólar / Reais a Dólar
+- Converter de Reais a Dólar / Dólar a Reais
 - Converter de Reais a Euro / Euro a Reais
 - Converter de Reais a Libras Esterlinas / Libras Esterlinas a Reais
 - Converter de Reais a Peso argentino / Peso Argentino a Reais
