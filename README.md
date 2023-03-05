@@ -32,6 +32,6 @@ Para abrir o conversor basta clicar na classe Menu.java dentro da ide Eclipse, c
 
 <h2> 🧑‍💻 Tecnologias utilizadas </h2>
 
-- Java 19.0.2
+- Java 1.8
 - Eclipse IDE
 - Paradigma de orientação a objetos
