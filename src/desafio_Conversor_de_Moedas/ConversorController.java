@@ -4,6 +4,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,23 +28,21 @@ public class ConversorController {
 		String inputValue = JOptionPane.showInputDialog("Digite um valor:");
 		try {
 			if (balanca == "maior") {
-
 				double valor = Double.parseDouble(inputValue);
-
 				double calc = valor / taxa;
-				BigDecimal calcD = toBigDecimal(calc);
-
-				String msg = "O valor convertido para " + moedaC + " $ " + calcD;
+				
+				String valorFormatado = new DecimalFormat("#,##0.0000").format(toBigDecimal(calc));
+				String msg = "O valor convertido para " + moedaC + " $ " + valorFormatado;
 				JOptionPane.showMessageDialog(null, msg);
 				confirmDialog();
 
 			} else if (balanca == "menor") {
 				double valor = Double.parseDouble(inputValue);
-
 				double calc = valor * taxa;
-				BigDecimal calcD = toBigDecimal(calc);
+				
+				String valorFormatado = new DecimalFormat("#,##0.0000").format(toBigDecimal(calc));
 
-				String msg = "O valor convertido para  " + moedaC + " $ " + calcD;
+				String msg = "O valor convertido para  " + moedaC + " $ " + valorFormatado;
 				JOptionPane.showMessageDialog(null, msg);
 				confirmDialog();
 
