@@ -11,6 +11,8 @@ import java.util.Map;
 public class ConversorController {
 
 	private Map<String, Double> conversoes;
+	private static final String MAIOR = "maior";
+	private static final String MENOR = "menor";
 
 	public ConversorController() {
 		this.conversoes = new HashMap<>();
@@ -27,7 +29,7 @@ public class ConversorController {
 		double taxa = this.conversoes.get(moeda);
 		String inputValue = JOptionPane.showInputDialog("Digite um valor:");
 		try {
-			if (balanca == "maior") {
+			if (balanca.equals(MAIOR)) {
 				double valor = Double.parseDouble(inputValue);
 				double calc = valor / taxa;
 				
@@ -36,7 +38,7 @@ public class ConversorController {
 				JOptionPane.showMessageDialog(null, msg);
 				confirmDialog();
 
-			} else if (balanca == "menor") {
+			} else if (balanca.equals(MENOR)) {
 				double valor = Double.parseDouble(inputValue);
 				double calc = valor * taxa;
 				
