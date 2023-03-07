@@ -3,11 +3,28 @@ package desafio_Conversor_de_Moedas;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import java.text.DecimalFormat;
+import java.util.HashMap;
+import java.util.Map;
+
+
 
 public class ConversorController {
+	
+	 private Map<String, Double> conversoes;
 
-	public void Convert(double taxa, String moeda, String balanca) {
+	    public ConversorController() {
+	        this.conversoes = new HashMap<>();
+	        this.conversoes.put("Dolar", 5.2);
+	        this.conversoes.put("Euro", 5.5);
+	        this.conversoes.put("Libra Esterlina", 6.2);
+	        this.conversoes.put("Peso Argentino", 37.46);
+	        this.conversoes.put("Peso Chileno", 158.61);
+	        
+	    }
+
+	public void Convert(String moeda, String moedaC, String balanca) {
 		
+		double taxa = this.conversoes.get(moeda);
 		String inputValue = JOptionPane.showInputDialog("Digite um valor:");
 		try {
 			if (balanca == "maior") {
@@ -18,7 +35,7 @@ public class ConversorController {
 				DecimalFormat df = new DecimalFormat("#,###.00");
 				df.format(calc);
 
-				String msg = "O valor convertido para " + moeda + "$ " + calc;
+				String msg = "O valor convertido para " + moedaC + " $ " + calc;
 				JOptionPane.showMessageDialog(null, msg);
 				confirmDialog();
 
@@ -29,7 +46,7 @@ public class ConversorController {
 				DecimalFormat df = new DecimalFormat("#,###.00");
 				df.format(calc);
 
-				String msg = "O valor convertido para  " + moeda + "$ " + calc;
+				String msg = "O valor convertido para  " + moedaC + " $ " + calc;
 				JOptionPane.showMessageDialog(null, msg);
 				confirmDialog();
 

@@ -66,34 +66,34 @@ public class ConversorMoedas extends JFrame {
 				String seleciona = comboBox.getSelectedItem().toString();
 				if (seleciona == "Converter de Reais a Dólar") {
 					ConversorController rd = new ConversorController();
-					rd.Convert(5.2, "Dolar", "maior");
+					rd.Convert("Dolar", "Dolar", "maior");
 				} else if (seleciona == "Converter de Reais a Euro") {
 					ConversorController re = new ConversorController();
-					re.Convert(5.5, "Euro", "maior");
+					re.Convert("Euro", "Euro", "maior");
 				} else if (seleciona == "Converter de Reais a Libras Esterlinas") {
 					ConversorController rl = new ConversorController();
-					rl.Convert(6.2, "Libras", "maior");
+					rl.Convert("Libra Esterlina", "Libras Esterlinas", "maior");
 				} else if (seleciona == "Converter de Reais a Peso Argentino") {
 					ConversorController rpa = new ConversorController();
-					rpa.Convert(37.46, "Peso Argentino", "menor");
+					rpa.Convert("Peso Argentino", "Peso Argentino", "menor");
 				} else if (seleciona == "Converter de Reais a Peso Chileno") {
 					ConversorController rpc = new ConversorController();
-					rpc.Convert(158.61, "Peso Chileno", "menor");
+					rpc.Convert("Peso Chileno","Peso Chileno", "menor");
 				} else if (seleciona == "Converter de Dólar a Reais") {
 					ConversorController dr = new ConversorController();
-					dr.Convert(5.2, "Reais", "menor");
+					dr.Convert("Dolar", "Reais", "menor");
 				} else if (seleciona == "Converter de Euro a Reais") {
 					ConversorController er = new ConversorController();
-					er.Convert(5.5, "Reais", "menor");
+					er.Convert("Euro", "Reais", "menor");
 				} else if (seleciona == "Converter de Libras Esterlinas a Reais") {
 					ConversorController ler = new ConversorController();
-					ler.Convert(6.2, "Reais", "menor");
+					ler.Convert("Libra Esterlina", "Reais", "menor");
 				} else if (seleciona == "Converter de Peso argentino a  Reais") {
 					ConversorController par = new ConversorController();
-					par.Convert(37.46, "Reais", "maior");
+					par.Convert("Peso Argentino", "Reais", "maior");
 				} else if (seleciona == "Converter de Peso Chileno a Reais") {
 					ConversorController pcr = new ConversorController();
-					pcr.Convert(158.61, "Reais", "maior");
+					pcr.Convert("Peso Chileno", "Reais", "maior");
 				}
 			}
 		});
@@ -107,7 +107,7 @@ public class ConversorMoedas extends JFrame {
 				dispose();
 			}
 		});
-		btnNewButton_1.setBounds(213, 135, 89, 23);
+		btnNewButton_1.setBounds(214, 135, 89, 23);
 		contentPane.add(btnNewButton_1);
 
 		JLabel lblNewLabel = new JLabel("Escolha uma moeda para converter");
