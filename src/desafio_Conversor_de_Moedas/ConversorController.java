@@ -26,25 +26,27 @@ public class ConversorController {
 
 	public void Convert(String moeda, String moedaC, String balanca) {
 
+		String symbol = setSymbol(moedaC);
 		double taxa = this.conversoes.get(moeda);
+
 		String inputValue = JOptionPane.showInputDialog("Digite um valor:");
 		try {
 			if (balanca.equals(MAIOR)) {
 				double valor = Double.parseDouble(inputValue);
 				double calc = valor / taxa;
-				
+
 				String valorFormatado = new DecimalFormat("#,##0.0000").format(toBigDecimal(calc));
-				String msg = "O valor convertido para " + moedaC + " $ " + valorFormatado;
+				String msg = "O valor convertido para " + moedaC + symbol + valorFormatado;
 				JOptionPane.showMessageDialog(null, msg);
 				confirmDialog();
 
 			} else if (balanca.equals(MENOR)) {
 				double valor = Double.parseDouble(inputValue);
 				double calc = valor * taxa;
-				
+
 				String valorFormatado = new DecimalFormat("#,##0.0000").format(toBigDecimal(calc));
 
-				String msg = "O valor convertido para  " + moedaC + " $ " + valorFormatado;
+				String msg = "O valor convertido para  " + moedaC + symbol + valorFormatado;
 				JOptionPane.showMessageDialog(null, msg);
 				confirmDialog();
 
@@ -86,4 +88,23 @@ public class ConversorController {
 		}
 	}
 
+	private String setSymbol(String moeda) {
+
+		String symbol;
+
+		switch (moeda) {
+
+		case "Euro":
+			symbol = "€ ";
+			return symbol;
+
+		case "Libra Esterlina":
+			symbol = "£ ";
+			return symbol;
+
+		default:
+			symbol = "$ ";
+			return symbol;
+		}
+	}
 }
