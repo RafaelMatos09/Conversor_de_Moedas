@@ -98,7 +98,7 @@ public class ConversorController {
 			symbol = "€ ";
 			return symbol;
 
-		case "Libra Esterlina ":
+		case "Libras Esterlinas ":
 			symbol = "£ ";
 			return symbol;
 
