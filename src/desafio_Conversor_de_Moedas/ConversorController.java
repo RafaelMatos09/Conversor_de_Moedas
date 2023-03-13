@@ -94,11 +94,11 @@ public class ConversorController {
 
 		switch (moeda) {
 
-		case "Euro":
+		case "Euro ":
 			symbol = "€ ";
 			return symbol;
 
-		case "Libra Esterlina":
+		case "Libra Esterlina ":
 			symbol = "£ ";
 			return symbol;
 
