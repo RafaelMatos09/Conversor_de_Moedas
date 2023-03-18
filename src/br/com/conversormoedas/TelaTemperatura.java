@@ -1,4 +1,4 @@
-package desafio_Conversor_de_Moedas;
+package br.com.conversormoedas;
 
 import java.awt.EventQueue;
 
@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JComboBox;
 
-public class ConversorTemperatura extends JFrame {
+public class TelaTemperatura extends JFrame {
 
 	private JPanel contentPane;
 
@@ -18,7 +18,7 @@ public class ConversorTemperatura extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					ConversorTemperatura frame = new ConversorTemperatura();
+					TelaTemperatura frame = new TelaTemperatura();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -30,7 +30,7 @@ public class ConversorTemperatura extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public ConversorTemperatura() {
+	public TelaTemperatura() {
 		setTitle("Temperatura");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);

@@ -1,4 +1,4 @@
-package desafio_Conversor_de_Moedas;
+package br.com.conversormoedas;
 
 import java.awt.EventQueue;
 
@@ -13,11 +13,9 @@ import javax.swing.DefaultComboBoxModel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class ConversorMoedas extends JFrame {
+public class TelaMoeda extends JFrame {
 
 	private JPanel contentPane;
-
-	
 
 	/**
 	 * Launch the application.
@@ -27,9 +25,8 @@ public class ConversorMoedas extends JFrame {
 			public void run() {
 				try {
 
-					ConversorMoedas frame = new ConversorMoedas();
+					TelaMoeda frame = new TelaMoeda();
 					frame.setVisible(true);
-					
 
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -41,7 +38,7 @@ public class ConversorMoedas extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public ConversorMoedas() {
+	public TelaMoeda() {
 		setTitle("Moedas");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -65,35 +62,55 @@ public class ConversorMoedas extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String seleciona = comboBox.getSelectedItem().toString();
 				if (seleciona == "Converter de Reais a Dólar") {
-					ConversorController rd = new ConversorController();
-					rd.Convert("Dolar", "Dolar ", "maior");
+					Moeda rd = new Dolar();
+					rd.convert(rd, "maior");
+					Dolar rds = new Dolar();
+					rds.convertRD(rds);
 				} else if (seleciona == "Converter de Reais a Euro") {
-					ConversorController re = new ConversorController();
-					re.Convert("Euro", "Euro ", "maior");
+					Moeda re = new Euro();
+					re.convert(re, "maior");
+					Euro res = new Euro();
+					res.convertRE(res);
 				} else if (seleciona == "Converter de Reais a Libras Esterlinas") {
-					ConversorController rl = new ConversorController();
-					rl.Convert("Libra Esterlina", "Libras Esterlinas ", "maior");
+					Moeda rl = new LibrasEsterlinas();
+					rl.convert(rl, "maior");
+					LibrasEsterlinas rls = new LibrasEsterlinas();
+					rls.convertRL(rls);
 				} else if (seleciona == "Converter de Reais a Peso Argentino") {
-					ConversorController rpa = new ConversorController();
-					rpa.Convert("Peso Argentino", "Peso Argentino ", "menor");
+					Moeda rpa = new PesoArgentino();
+					rpa.convert(rpa, "menor");
+					PesoArgentino rpas = new PesoArgentino();
+					rpas.convertRPA(rpas);
 				} else if (seleciona == "Converter de Reais a Peso Chileno") {
-					ConversorController rpc = new ConversorController();
-					rpc.Convert("Peso Chileno","Peso Chileno ", "menor");
+					Moeda rpc = new PesoChileno();
+					rpc.convert(rpc, "menor");
+					PesoChileno rpcs = new PesoChileno();
+					rpcs.convertRPC(rpcs);
 				} else if (seleciona == "Converter de Dólar a Reais") {
-					ConversorController dr = new ConversorController();
-					dr.Convert("Dolar", "Reais ", "menor");
+					Moeda dr = new Dolar();
+					dr.convert(dr, "menor");
+					Dolar drs = new Dolar();
+					drs.convertDR(drs);
 				} else if (seleciona == "Converter de Euro a Reais") {
-					ConversorController er = new ConversorController();
-					er.Convert("Euro", "Reais ", "menor");
+					Moeda er = new Euro();
+					er.convert(er, "menor");
+					Euro ers = new Euro();
+					ers.convertER(ers);
 				} else if (seleciona == "Converter de Libras Esterlinas a Reais") {
-					ConversorController ler = new ConversorController();
-					ler.Convert("Libra Esterlina", "Reais ", "menor");
+					Moeda ler = new LibrasEsterlinas();
+					ler.convert(ler, "menor");
+					LibrasEsterlinas lers = new LibrasEsterlinas();
+					lers.convertLR(lers);
 				} else if (seleciona == "Converter de Peso argentino a  Reais") {
-					ConversorController par = new ConversorController();
-					par.Convert("Peso Argentino", "Reais ", "maior");
+					Moeda par = new PesoArgentino();
+					par.convert(par, "maior");
+					PesoArgentino pars = new PesoArgentino();
+					pars.convertPAR(pars);
 				} else if (seleciona == "Converter de Peso Chileno a Reais") {
-					ConversorController pcr = new ConversorController();
-					pcr.Convert("Peso Chileno", "Reais ", "maior");
+					Moeda pcr = new PesoChileno();
+					pcr.convert(pcr, "maior");
+					PesoChileno pcrs = new PesoChileno();
+					pcrs.convertPCR(pcrs);
 				}
 			}
 		});
@@ -103,7 +120,7 @@ public class ConversorMoedas extends JFrame {
 		JButton btnNewButton_1 = new JButton("Menu");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new Menu().setVisible(true);
+				new TelaMenu().setVisible(true);
 				dispose();
 			}
 		});
