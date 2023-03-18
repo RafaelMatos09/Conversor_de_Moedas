@@ -1,6 +1,6 @@
 package br.com.conversormoedas;
 
-import javax.swing.ImageIcon;
+
 import javax.swing.JOptionPane;
 
 public abstract class Moeda {
@@ -45,24 +45,12 @@ public abstract class Moeda {
 				double valor = Double.parseDouble(inputValue);
 				double calc = valor / moeda.getCambio();
 				this.valorConvertido = calc;
-				/*
-				 * String valorFormatado = new DecimalFormat("#,##0.0000").format(calc); String
-				 * msg = "O valor convertido de " + moeda.getNome() + "para " + moedac +
-				 * moeda.getSimbolo() + valorFormatado; JOptionPane.showMessageDialog(null,
-				 * msg);
-				 */
+
 
 			} else if (balanca.equals(MENOR)) {
 				double valor = Double.parseDouble(inputValue);
 				double calc = valor * moeda.getCambio();
 				this.valorConvertido = calc;
-
-				/*
-				 * String valorFormatado = new DecimalFormat("#,##0.0000").format(calc);
-				 * 
-				 * String msg = "O valor convertido para  " + "Reais" + "$" + valorFormatado;
-				 * JOptionPane.showMessageDialog(null, msg);
-				 */
 
 			}
 
