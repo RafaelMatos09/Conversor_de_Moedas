@@ -63,9 +63,9 @@ public abstract class Moeda {
 	
 	public void confirmDialog() {
 
-		ImageIcon icon = new ImageIcon("src/images/dialog006.png");
+
 		int input = JOptionPane.showConfirmDialog(null, "Deseja continuar?", "Selecione uma opção",
-				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, icon);
+				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
 		if (input == 0) {
 			String msg = "Voltando a tela de moedas";
 			JOptionPane.showMessageDialog(null, msg);
