@@ -1,6 +1,8 @@
 package br.com.conversormoedas;
 
+import java.text.DecimalFormat;
 
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 public abstract class Moeda {
@@ -46,7 +48,6 @@ public abstract class Moeda {
 				double calc = valor / moeda.getCambio();
 				this.valorConvertido = calc;
 
-
 			} else if (balanca.equals(MENOR)) {
 				double valor = Double.parseDouble(inputValue);
 				double calc = valor * moeda.getCambio();
@@ -60,9 +61,8 @@ public abstract class Moeda {
 		}
 
 	}
-	
-	public void confirmDialog() {
 
+	public void confirmDialog() {
 
 		int input = JOptionPane.showConfirmDialog(null, "Deseja continuar?", "Selecione uma opção",
 				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
@@ -80,6 +80,22 @@ public abstract class Moeda {
 			JOptionPane.showMessageDialog(null, msg);
 
 		}
+	}
+
+	public void formatOutVR(double valorC) {
+
+		String valorFormatado = new DecimalFormat("#,##0.00").format(valorC);
+		String msg = "O valor convertido de " + getNome() + " " + getSimbolo() + " a Reais $ " + valorFormatado;
+		JOptionPane.showMessageDialog(null, msg);
+		confirmDialog();
+	}
+
+	public void formatOutRV(double valorC) {
+
+		String valorFormatado = new DecimalFormat("#,##0.00").format(valorC);
+		String msg = "O valor convertido de Reais a " + getNome() + " " + getSimbolo() + " " + valorFormatado;
+		JOptionPane.showMessageDialog(null, msg);
+		confirmDialog();
 	}
 
 }

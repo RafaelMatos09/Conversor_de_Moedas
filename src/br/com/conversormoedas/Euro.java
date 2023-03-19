@@ -11,22 +11,13 @@ public class Euro extends Moeda {
 
 	public void convertER(Moeda moeda) {
 		double valorC = moeda.getValorConvertido();
+		moeda.formatOutVR(valorC);
 
-		String valorFormatado = new DecimalFormat("#,##0.00").format(valorC);
-		String msg = "O valor convertido de " + moeda.getNome() + " " + moeda.getSimbolo() + " a Reais $ "
-				+ valorFormatado;
-		JOptionPane.showMessageDialog(null, msg);
-		moeda.confirmDialog();
 	}
 
 	public void convertRE(Moeda moeda) {
 
 		double valorC = moeda.getValorConvertido();
-
-		String valorFormatado = new DecimalFormat("#,##0.00").format(valorC);
-		String msg = "O valor convertido de Reais a " + moeda.getNome() + " " + moeda.getSimbolo() + " "
-				+ valorFormatado;
-		JOptionPane.showMessageDialog(null, msg);
-		moeda.confirmDialog();
+		moeda.formatOutRV(valorC);
 	}
 }

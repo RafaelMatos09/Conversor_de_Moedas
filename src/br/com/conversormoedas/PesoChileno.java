@@ -10,23 +10,16 @@ public class PesoChileno extends Moeda {
 	}
 
 	public void convertPCR(Moeda moeda) {
-		double valorC = moeda.getValorConvertido();
 
-		String valorFormatado = new DecimalFormat("#,##0.00").format(valorC);
-		String msg = "O valor convertido de " + moeda.getNome() + " " + moeda.getSimbolo() + " a Reais $ "
-				+ valorFormatado;
-		JOptionPane.showMessageDialog(null, msg);
-		moeda.confirmDialog();
+		double valorC = moeda.getValorConvertido();
+		moeda.formatOutVR(valorC);
+
 	}
 
 	public void convertRPC(Moeda moeda) {
 
 		double valorC = moeda.getValorConvertido();
+		moeda.formatOutRV(valorC);
 
-		String valorFormatado = new DecimalFormat("#,##0.00").format(valorC);
-		String msg = "O valor convertido de Reais a " + moeda.getNome() + " " + moeda.getSimbolo() + " "
-				+ valorFormatado;
-		JOptionPane.showMessageDialog(null, msg);
-		moeda.confirmDialog();
 	}
 }
