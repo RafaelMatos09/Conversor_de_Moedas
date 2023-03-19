@@ -27,7 +27,7 @@ public class TelaMoeda extends JFrame {
 
 					TelaMoeda frame = new TelaMoeda();
 					frame.setVisible(true);
-
+					frame.setLocationRelativeTo(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -120,7 +120,9 @@ public class TelaMoeda extends JFrame {
 		JButton btnNewButton_1 = new JButton("Menu");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new TelaMenu().setVisible(true);
+				TelaMenu frame2 = new TelaMenu();
+				frame2.setVisible(true);
+				frame2.setLocationRelativeTo(null);
 				dispose();
 			}
 		});

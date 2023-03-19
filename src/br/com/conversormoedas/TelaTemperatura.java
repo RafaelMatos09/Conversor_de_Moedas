@@ -20,6 +20,7 @@ public class TelaTemperatura extends JFrame {
 				try {
 					TelaTemperatura frame = new TelaTemperatura();
 					frame.setVisible(true);
+					frame.setLocationRelativeTo(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

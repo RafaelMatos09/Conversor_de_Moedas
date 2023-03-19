@@ -84,18 +84,27 @@ public abstract class Moeda {
 
 	public void formatOutVR(double valorC) {
 
-		String valorFormatado = new DecimalFormat("#,##0.00").format(valorC);
-		String msg = "O valor convertido de " + getNome() + " " + getSimbolo() + " a Reais $ " + valorFormatado;
-		JOptionPane.showMessageDialog(null, msg);
-		confirmDialog();
+		if (valorC == 0) {
+			throw new NumeroZeroException();
+		} else {
+			String valorFormatado = new DecimalFormat("#,##0.00").format(valorC);
+			String msg = "O valor convertido de " + getNome() + " " + getSimbolo() + " a Reais $ " + valorFormatado;
+			JOptionPane.showMessageDialog(null, msg);
+			confirmDialog();
+			valorConvertido = 0;
+		}
 	}
 
 	public void formatOutRV(double valorC) {
 
-		String valorFormatado = new DecimalFormat("#,##0.00").format(valorC);
-		String msg = "O valor convertido de Reais a " + getNome() + " " + getSimbolo() + " " + valorFormatado;
-		JOptionPane.showMessageDialog(null, msg);
-		confirmDialog();
+		if (valorC == 0) {
+			throw new NumeroZeroException();
+		} else {
+			String valorFormatado = new DecimalFormat("#,##0.00").format(valorC);
+			String msg = "O valor convertido de Reais a " + getNome() + " " + getSimbolo() + " " + valorFormatado;
+			JOptionPane.showMessageDialog(null, msg);
+			confirmDialog();
+			valorConvertido = 0;
+		}
 	}
-
 }

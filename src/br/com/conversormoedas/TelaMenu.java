@@ -26,6 +26,7 @@ public class TelaMenu extends JFrame {
 				try {
 					TelaMenu frame = new TelaMenu();
 					frame.setVisible(true);
+					frame.setLocationRelativeTo(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -56,7 +57,10 @@ public class TelaMenu extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String seleciona = comboBox.getSelectedItem().toString();
 				if (seleciona == "Conversor de moedas") {
-					new TelaMoeda().setVisible(true);
+					/* new TelaMoeda().setVisible(true); */
+					TelaMoeda frame2 = new TelaMoeda();
+					frame2.setVisible(true);
+					frame2.setLocationRelativeTo(null);
 					dispose();
 
 				}
