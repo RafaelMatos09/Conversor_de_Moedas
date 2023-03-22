@@ -11,6 +11,10 @@ Back End - Java </h1>
 Desafio proposto pela Oracle ONE turma 4, conversor de moedas em JAVA utilizando uma interface grafica, selecionando as opções desejadas para conversão.
 <br><br>
 
+https://user-images.githubusercontent.com/11903546/226196772-4b1ff3af-6ef9-4abb-b109-b478f7f8acd6.mp4
+
+<br><br>
+
 <h2 align="left">:hammer: Funcionalidades</h2>
 
 <strong>Conversor de Moedas</strong>
@@ -28,7 +32,7 @@ Desafio proposto pela Oracle ONE turma 4, conversor de moedas em JAVA utilizando
 <br>
 <h2>🛠️ Abrir e rodar o projeto</h2>
 
-Para abrir o conversor basta clicar na classe Menu.java dentro da ide Eclipse, com todas os arquivos do repositorio, irá abrir um menu de seleção para qual funcionalidade deseja.
+Para abrir o conversor basta clicar na classe Menu.java dentro da IDE, com todas os arquivos do repositorio, irá abrir um menu de seleção para qual funcionalidade deseja.
 
 <h2> 🧑‍💻 Tecnologias utilizadas </h2>
 
