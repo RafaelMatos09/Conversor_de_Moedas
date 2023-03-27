@@ -65,8 +65,9 @@ public class TelaMenu extends JFrame {
 
 				}
 				if (seleciona == "Conversor de temperatura") {
-					new TelaTemperatura().setVisible(true);
-					dispose();
+					TelaTemperatura frame3 = new TelaTemperatura();
+					frame3.setVisible(true);
+					frame3.setLocationRelativeTo(null);
 				}
 			}
 		});
