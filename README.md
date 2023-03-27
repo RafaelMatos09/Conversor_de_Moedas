@@ -3,7 +3,7 @@
 Back End - Java </h1>
 
 <p align="center">
-<img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
+<img src="http://img.shields.io/static/v1?label=STATUS&message=%20CONCLUIDO&color=GREEN&style=for-the-badge"/>
 </p>
  
 <h2 align="left"> 📖 Descrição </h2>
@@ -27,7 +27,9 @@ https://user-images.githubusercontent.com/11903546/226196772-4b1ff3af-6ef9-4abb-
 
 <strong>Conversor de Temperatura</strong>
 
-🚧 Funcionalidade em construção 🚧
+- Converter de Fahrenheit para Celsius / Celsius para Fahrenheit
+- Converter de Celsius para Kelvin / Kelvin para Celsius
+- Converter de Kelvin para Fahrenheit / Fahrenheit para Kelvin 
 
 <br>
 <h2>🛠️ Abrir e rodar o projeto</h2>
